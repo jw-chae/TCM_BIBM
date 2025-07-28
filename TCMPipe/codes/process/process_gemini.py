@@ -22,7 +22,7 @@ PROMPT = (
 RATE_LIMIT_SECONDS = 4
 
 # API 키 설정: 환경변수 없으면 기본값 사용
-API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyBzrd3FQDcSx7potqx77VgdZacPXuElae8")
+API_KEY = os.getenv("GEMINI_API_KEY", "")
 
 client = genai.Client(api_key=API_KEY)
 
