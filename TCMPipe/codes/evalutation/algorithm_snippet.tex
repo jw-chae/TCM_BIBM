@@ -1,0 +1,26 @@
+\begin{algorithm}
+\caption{Tongue-Eval Score Computation}
+\label{alg:tongue-eval}
+\begin{algorithmic}[1] 
+    \Require pred = ``t1 t2'', label = ``t1 t3'' \Comment{Input strings}
+    \Ensure Similarity score $s$ and diagnostic details \Comment{Output description}
+    \State
+    \Function{Compute Tongue Eval}{pred, label}
+        \State cfg $\gets$ LoadConfig(``token\_config.json'') \Comment{Load configuration}
+        \State ts\_pred $\gets$ cfg.extract(pred) \Comment{Extract tokens from prediction}
+        \State ts\_lab $\gets$ cfg.extract(label) \Comment{Extract tokens from label}
+        \State cats\_pred $\gets$ ts\_pred.to\_categories(cfg.category\_map) \Comment{Categorize}
+        \State cats\_lab $\gets$ ts\_lab.to\_categories(cfg.category\_map) \Comment{Categorize}
+        \State total $\gets$ 0.0, total\_w $\gets$ 0.0 \Comment{Initialize scores}
+        \For{each category $c$ in \{tongue, coat, location, other\}}
+            \State sim $\gets$ PairwiseSimilarity(cats\_pred[c], cats\_lab[c], cfg)
+            \State weight $\gets$ cfg.weights[c] \Comment{Get category weight}
+            \State total $\gets$ total + sim $\times$ weight
+            \State total\_w $\gets$ total\_w + weight
+            \State details[c] $\gets$ sim \Comment{Store category score}
+        \EndFor
+        \State overall $\gets$ total / total\_w \Comment{Weighted average}
+        \State \Return (overall, details)
+    \EndFunction
+\end{algorithmic}
+\end{algorithm} 
