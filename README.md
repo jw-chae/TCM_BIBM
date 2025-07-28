@@ -2,24 +2,55 @@
 
 Traditional Chinese Medicine (TCM) Bioinformatics and Biomedical Informatics Model
 
-## 프로젝트 개요
+## Project Overview
 
-이 프로젝트는 전통중의학(TCM) 데이터를 활용한 바이오인포매틱스 및 생물의학정보학 모델링을 위한 파이프라인입니다.
+This project provides a comprehensive pipeline for Traditional Chinese Medicine (TCM) data analysis, focusing on bioinformatics and biomedical informatics modeling. The pipeline includes preprocessing, processing, and evaluation modules for TCM-related datasets.
 
-## 구조
+## Project Structure
 
 ```
 TCMPipe/
 ├── codes/
-│   ├── evalutation/     # 평가 관련 코드
-│   ├── preprocess/      # 전처리 관련 코드
-│   └── process/         # 처리 관련 코드
+│   ├── evalutation/     # Evaluation and assessment related code
+│   ├── preprocess/      # Data preprocessing and preparation code
+│   └── process/         # Data processing and model inference code
 ```
 
-## 사용법
+## Features
 
-각 디렉토리의 README 파일을 참조하여 사용하세요.
+- **Data Preprocessing**: Tools for data cleaning, augmentation, and format conversion
+- **Model Processing**: Inference pipelines for various AI models (GPT, Gemini, Grok, LLaMA, Qwen)
+- **Evaluation**: Comprehensive evaluation metrics and assessment tools
+- **Tongue Image Analysis**: Specialized tools for TCM tongue image processing
 
-## 라이선스
+## Usage
 
-이 프로젝트는 MIT 라이선스 하에 배포됩니다. 
+Please refer to the README files in each subdirectory for specific usage instructions:
+
+- `codes/evalutation/` - Evaluation tools and metrics
+- `codes/preprocess/` - Data preprocessing utilities
+- `codes/process/` - Model processing and inference
+
+## Requirements
+
+- Python 3.8+
+- Required packages will be listed in each subdirectory
+
+## Installation
+
+```bash
+git clone https://github.com/jw-chae/TCM_BIBM.git
+cd TCM_BIBM
+```
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Contact
+
+For questions and support, please open an issue on GitHub. 
