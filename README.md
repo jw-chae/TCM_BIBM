@@ -1,32 +1,12 @@
-<<<<<<< HEAD
-# TCMPipe: Traditional Chinese Medicine Pipeline
+# TCMPipe: Anonymous 2025 BIBM Submission Project
 
 A comprehensive pipeline for Traditional Chinese Medicine (TCM) diagnosis and analysis, featuring both prescription-based RAG systems and tongue diagnosis capabilities.
 
-## 🏥 Project Overview
-
-TCMPipe is a complete system for TCM analysis that combines:
-- **Prescription Analysis**: RAG-based intelligent diagnosis system
-- **Tongue Diagnosis**: Computer vision-based tongue image analysis
-- **Evaluation Framework**: Comprehensive metrics for both systems
-
 ## 📁 Project Structure
-=======
-# TCM_BIBM
-
-Traditional Chinese Medicine (TCM) Bioinformatics and Biomedical Informatics Model
-
-## Project Overview
-
-This project provides a comprehensive pipeline for Traditional Chinese Medicine (TCM) data analysis, focusing on bioinformatics and biomedical informatics modeling. The pipeline includes preprocessing, processing, and evaluation modules for TCM-related datasets.
-
-## Project Structure
->>>>>>> 07e8c4e24664334ec34917a50d228290f741087a
 
 ```
 TCMPipe/
 ├── codes/
-<<<<<<< HEAD
 │   ├── requirements.txt              # Unified dependencies for entire project
 │   │
 │   ├── Prescription code/           # RAG-based prescription analysis
@@ -178,8 +158,6 @@ python process_qwen2_5vl_infer.py \
 # Process with Gemini
 python process_gemini.py
 
-# Process with GPT-4o
-python process_gpt_o3.py
 ```
 
 #### Evaluation
@@ -187,7 +165,7 @@ python process_gpt_o3.py
 cd codes/TONGUE_diagnosis/evalutation/
 
 # Run evaluation
-python evaluation2_ver2.py \
+python evaluation.py \
     --config token_config.json \
     --pred predictions.jsonl \
     --label labels.jsonl \
@@ -223,7 +201,7 @@ python calculate_bleu_score.py
 - **Prescription Completeness**: Checks for complete prescription information
 
 ### Tongue Diagnosis
-- **Token-Level Metrics**: Precision, recall, F1-score for individual tokens
+
 - **Category-Level Metrics**: Separate evaluation for tongue, coat, location, and other categories
 - **Similarity Scoring**: Hungarian algorithm for optimal token matching
 - **BLEU Score**: Character-level BLEU score calculation
@@ -266,18 +244,6 @@ top_k = 50                                       # Top-k sampling
 }
 ```
 
-## 📈 Performance
-
-### RAG System Performance
-- **Processing Speed**: ~2-3 seconds per case
-- **Memory Usage**: ~8GB RAM for vector operations
-- **Accuracy**: 85%+ for complete diagnosis (diagnosis + syndrome + prescription)
-
-### Tongue Diagnosis Performance
-- **Image Processing**: ~0.5 seconds per image
-- **Model Inference**: Varies by model (Qwen2.5-VL: ~2s, Gemini: ~1s, GPT-4o: ~1s)
-- **Evaluation Speed**: ~1000 samples/second
-
 ## 🔍 Troubleshooting
 
 ### Common Issues
@@ -314,76 +280,12 @@ top_k = 50                                       # Top-k sampling
    # Validate image matching
    python check_image_matching.py --image_dir /path/to/images --json_file data.json
    ```
-
-## 📚 Documentation
-
-- **Prescription Code**: See `codes/Prescription code/README_CN.md` for detailed Chinese documentation
-- **API Reference**: Each module includes comprehensive docstrings
-- **Examples**: Sample data and usage examples provided
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- **TCM Knowledge Base**: Traditional Chinese Medicine literature and case studies
-- **Vision Models**: Qwen2.5-VL, Gemini, GPT-4o, Llama4, Grok for multimodal analysis
-- **Evaluation Framework**: Enhanced metrics for comprehensive assessment
-
+### dataset
+The dataset will be updated when the paper is accepted.
 ---
 
 **Note**: This system is designed for research and educational purposes. For clinical use, please consult with qualified TCM practitioners and follow appropriate medical guidelines. 
-=======
-│   ├── evalutation/     # Evaluation and assessment related code
-│   ├── preprocess/      # Data preprocessing and preparation code
-│   └── process/         # Data processing and model inference code
-```
 
-## Features
+## 📄 License
 
-- **Data Preprocessing**: Tools for data cleaning, augmentation, and format conversion
-- **Model Processing**: Inference pipelines for various AI models (GPT, Gemini, Grok, LLaMA, Qwen)
-- **Evaluation**: Comprehensive evaluation metrics and assessment tools
-- **Tongue Image Analysis**: Specialized tools for TCM tongue image processing
-
-## Usage
-
-Please refer to the README files in each subdirectory for specific usage instructions:
-
-- `codes/evalutation/` - Evaluation tools and metrics
-- `codes/preprocess/` - Data preprocessing utilities
-- `codes/process/` - Model processing and inference
-
-## Requirements
-
-- Python 3.8+
-- Required packages will be listed in each subdirectory
-
-## Installation
-
-```bash
-git clone https://github.com/jw-chae/TCM_BIBM.git
-cd TCM_BIBM
-```
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Contact
-
-For questions and support, please open an issue on GitHub. 
->>>>>>> 07e8c4e24664334ec34917a50d228290f741087a
+This project is licensed under the Apache License 2.0 - see the LICENSE file for details. 
