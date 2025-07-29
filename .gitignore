@@ -1,0 +1,102 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Model files and large data
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Data files (if too large)
+*.csv
+*.json
+*.jsonl
+*.txt
+!requirements.txt
+!README*.md
+!*.py
+
+# FAISS index (auto-generated)
+faiss_index/
+
+# Ollama models
+models/
+
+# API keys and secrets
+.env
+*.key
+secrets/
+
+# Evaluation results (can be regenerated)
+results/
+outputs/
+predictions/
+
+# Image files (if too large)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+
+# Audio/Video files
+*.mp3
+*.mp4
+*.avi
+*.mov 
