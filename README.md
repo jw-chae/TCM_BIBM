@@ -20,26 +20,12 @@ TCMPipe/
 │   └── TONGUE_diagnosis/           # Tongue diagnosis system
 │       ├── preprocess/             # Data preprocessing
 │       │   ├── augment_tongue_dataset.py           # Image augmentation
-│       │   ├── check_images_simple.py              # Image validation
-│       │   ├── check_corrupted_images.py           # Corrupted image detection
-│       │   ├── convert_to_sharegpt_vllm_json.py   # Format conversion
 │       │   ├── rename_files.py                     # File renaming utilities
 │       │   ├── test_augmentation.py                # Augmentation testing
-│       │   ├── create_unique_dataset.py            # Dataset deduplication
-│       │   ├── verify_matching.py                  # Data matching verification
-│       │   ├── extract_missing_images.py           # Missing image extraction
-│       │   ├── check_image_matching.py             # Image matching validation
-│       │   ├── split_and_convert_to_sharegpt_vllm.py  # Data splitting
-│       │   ├── extract_masked_images.py            # Masked image extraction
-│       │   ├── split_and_convert_to_qwen25vl_jsonl.py # Qwen2.5-VL format
-│       │   ├── make_segmented_gt_json.py           # Ground truth creation
-│       │   ├── match_segmented_image_gt.py         # Image-GT matching
-│       │   ├── fix_sharegpt_paths.py               # Path fixing utilities
-│       │   ├── fix_sharegpt_paths_simple.py        # Simple path fixing
 │       │   ├── convert_to_sharegpt_vllm_json_split.py # Split conversion
-│       │   ├── debug_matching.py                   # Matching debugging
-│       │   ├── check_unmatched_data.py             # Unmatched data check
-│       │   └── fix_date_format_matching.py         # Date format fixing
+│       │   ├── verify_matching.py                  # Data matching verification
+│       │   ├── split_and_convert_to_sharegpt_vllm.py  # Data splitting
+│       │   └── split_and_convert_to_qwen25vl_jsonl.py # Qwen2.5-VL format
 │       │
 │       ├── process/                # Model processing
 │       │   ├── process_qwen2_5vl_infer.py         # Qwen2.5-VL inference
