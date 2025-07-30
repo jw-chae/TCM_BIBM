@@ -1,6 +1,12 @@
-# TCMPipe: Anonymous 2025 BIBM Submission Project
+# ViTCM-LLM: Anonymous 2025 BIBM Submission Project
 
-A comprehensive pipeline for Traditional Chinese Medicine (TCM) diagnosis and analysis, featuring both prescription-based RAG systems and tongue diagnosis capabilities.
+🌍Official code implementation of "*ViTCM-LLM: A Multimodal RAG Framework for Advanced TCM Clinical Decision Support*"
+
+![ViTCM-LLM Framework](img/ViTCM-LLM-framework-1.png)
+
+## News
+
+- **[2025.07.29]** 🤗 We release ViTCM-LLM, a multimodal RAG framework for advanced TCM clinical decision support. All model code, training code, and evaluation code are anonymously open-sourced. Please check the document below for more details. Welcome to **watch** 👀 this repository for the latest updates.
 
 ## 📁 Project Structure
 
@@ -267,8 +273,7 @@ top_k = 50                                       # Top-k sampling
    python check_image_matching.py --image_dir /path/to/images --json_file data.json
    ```
 ### dataset
-The dataset will be updated when the paper is accepted.
----
+#### The dataset will be updated when the paper is accepted.
 
 **Note**: This system is designed for research and educational purposes. For clinical use, please consult with qualified TCM practitioners and follow appropriate medical guidelines. 
 
